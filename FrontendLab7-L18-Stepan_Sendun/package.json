@@ -1,0 +1,29 @@
+{
+  "name": "networking",
+  "version": "0.0.1",
+  "description": "homework",
+  "main": "app.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveRusin/FL7-L18-Networking.git"
+  },
+  "keywords": [
+    "L18"
+  ],
+  "author": "Stepan Sendun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveRusin/FL7-L18-Networking/issues"
+  },
+  "homepage": "https://github.com/SteveRusin/FL7-L18-Networking#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "crypto": "^1.0.1",
+    "express": "^4.15.4",
+    "express-xml-bodyparser": "^0.3.0",
+    "multer": "^1.3.0"
+  }
+}
