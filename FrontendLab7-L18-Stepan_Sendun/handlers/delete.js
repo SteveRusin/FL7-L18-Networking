@@ -14,12 +14,12 @@ module.exports = function (app) {
                     if (value['id'] === id) {
                         updatedArr.splice(index, 1);
                         found = true;
-                        res.send('{"message": "User has been successfully removed."}');
+                        res.status(200);
                     }
                 }
 
                 if (!found) {
-                    res.sendStatus(404);
+                    res.status(404);
                     found = false;
                 } else {
                     fs.writeFile('users.json', JSON.stringify(updatedArr), null, function (err) {

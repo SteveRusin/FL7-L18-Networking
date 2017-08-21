@@ -6,14 +6,14 @@ module.exports = function (app) {
             if (err) {
                 console.log(err);
             } else {
-
                 if (!!!data.toString()) {
-                    res.send('[]');
+                    res.status(200).send(['[]']).end();
                 } else {
-                    res.send(data);
+                    res.status(200).send(data).end();
                 }
 
             }
         })
+
     });
 }

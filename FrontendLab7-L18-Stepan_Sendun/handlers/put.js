@@ -1,5 +1,5 @@
 const fs = require('fs');
-const cryptoFns = require('../crypto');
+//const cryptoFns = require('../crypto');
 
 module.exports = function (app) {
     app.put('/users/:id', function (req, res) {
@@ -7,7 +7,7 @@ module.exports = function (app) {
         var found = false;
         var foundIndex;
         var user = req.body;
-        user.password = cryptoFns.encrypt(user.password);
+        //user.password = cryptoFns.encrypt(user.password);
         var result;
         fs.readFile('./users.json', function (err, data) {
             if (err) {
@@ -20,6 +20,7 @@ module.exports = function (app) {
                         result = Object.assign(value, user);
                         found = true;
                         foundIndex = index;
+                        res.status(200);
                         res.send(result);
                     }
                 }
@@ -31,6 +32,7 @@ module.exports = function (app) {
                     fs.writeFile('users.json', JSON.stringify(updatedArr), null, function (err) {
                         if (err) console.log(err);
                     })
+                    
                 }
                 res.end();
             }
